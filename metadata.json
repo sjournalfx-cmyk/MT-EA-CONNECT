@@ -1,0 +1,5 @@
+{
+  "name": "TradeSync Journal",
+  "description": "A professional trading journal app that simulates MetaTrader 5 connection to fetch and analyze trade history using Gemini AI.",
+  "requestFramePermissions": []
+}
