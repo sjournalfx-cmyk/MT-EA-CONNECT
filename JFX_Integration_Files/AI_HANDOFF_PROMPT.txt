@@ -1,0 +1,33 @@
+# AI Handoff Prompt
+
+**Instructions for the User:**
+Copy the text below and paste it to the AI agent in your Firebase Studio / JFX Journal workspace.
+
+---
+
+**PROMPT START**
+
+I have a folder called `JFX_Integration_Files` that contains the code to add MT5 EA connectivity to this Next.js app.
+
+**STEP 0: READ THE RULES**
+Before doing anything, please read `JFX_Integration_Files/AI_RULES.md`. You must strictly follow the constraints defined there (e.g., do not touch unrelated files, preserve logic).
+
+Here is the plan:
+
+1.  **Backend (API Route):**
+    - Take the content of `JFX_Integration_Files/route.ts` and place it in `src/app/api/ea-webhook/route.ts`.
+    - Ensure that `firebase-admin` is correctly set up in `src/lib/firebase-admin.ts`. If that file doesn't exist, please create it and initialize the Firebase Admin SDK.
+
+2.  **Frontend (Dashboard Page):**
+    - Take the content of `JFX_Integration_Files/page.tsx` and place it in `src/app/(dashboard)/ea-connect/page.tsx`.
+    - Check the imports in this file. It imports `db` from `@/lib/firebase` and types from `@/types`. Please ensure these paths match our project structure or adjust the imports accordingly.
+
+3.  **Dependencies:**
+    - We need `firebase-admin` and `zod` installed. Please check `package.json` and add them if missing.
+
+4.  **Navigation:**
+    - Please add a link to the new "EA Connect" page (`/ea-connect`) in the main sidebar navigation so I can access it.
+
+Please execute these steps and let me know when the integration is complete.
+
+**PROMPT END**

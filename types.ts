@@ -1,29 +1,39 @@
-export interface Trade {
+export type Trade = {
   ticket: number;
   symbol: string;
   type: 'Buy' | 'Sell';
   openTime: string;
   closeTime: string;
-  openPrice: number;
-  closePrice: number;
-  lots: number;
   profit: number;
   commission: number;
   swap: number;
-}
+  lots: number;
+  openPrice: number;
+  closePrice: number;
+};
 
-export interface ConnectionConfig {
+export type AccountInfo = {
+  login: number;
+  name: string;
   server: string;
-  login: string;
-  password: string;
-  deductFees: boolean;
-  isCentAccount: boolean;
-  notificationPreference: string;
-}
+  currency: string;
+  leverage: number;
+  balance: number;
+  equity: number;
+  isReal: boolean;
+};
 
-export interface AnalysisResult {
-  summary: string;
-  strengths: string[];
-  weaknesses: string[];
-  grade: string;
-}
+export type OpenPosition = {
+  ticket: number;
+  symbol: string;
+  type: 'Buy' | 'Sell';
+  openTime: string;
+  openPrice: number;
+  currentPrice: number;
+  sl: number;
+  tp: number;
+  lots: number;
+  swap: number;
+  profit: number;
+  comment?: string;
+};
